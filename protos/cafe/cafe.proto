@@ -1,23 +1,10 @@
 package cafe;
 
-/* message Deeplink { */
-/*   repeated Request requests = 1; */
-/*   required string provider_code = 2; */
+message Cafe {
+  repeated Request requests = 1;
+  required string provider_code = 2;
+}
 
-/*   // DEPRECATED */
-/*   optional string tracking_provider_code = 3; */
-/* } */
-
-
-/* message Request { */
-/*   required string url = 1; */
-/*   required string method = 2; */
-/*   required string post_params = 3; */
-/*   optional int32 delay = 4; */
-/* } */
-
-/* message Response { */
-/*   required string provider_code = 1; */
-/*   optional string provider_name = 2; */
-/*   optional string image_url = 3; */
-/* } */
+message Response {
+  required Cafe cafes = 1;
+}
