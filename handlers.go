@@ -14,8 +14,8 @@ type AppContext struct {
 }
 
 // TODO: Add in db app context
-func NewAppContext() AppContext {
-	return AppContext{nil}
+func NewAppContext(db *sql.DB) AppContext {
+	return AppContext{db: db}
 }
 
 func (ac *AppContext) IndexHandler(w http.ResponseWriter, r *http.Request) {
