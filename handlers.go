@@ -22,8 +22,8 @@ func (ac *AppContext) IndexHandler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Welcome!\n")
 
 	query := r.URL.Query()
-	if len(query.get("location")) > 0 {
-		lq := query.get("location")[0]
+	if len(query.Get("location")) > 0 {
+		lq := query.Gkt("location")[0]
 		fmt.Fprint(w, "Your location query: ", lq)
 	}
 
