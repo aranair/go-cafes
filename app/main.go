@@ -39,9 +39,8 @@ func main() {
 	}
 	fmt.Println(conf)
 
-	// pqStr := "user=" + conf.DB.User + " password=" + conf.DB.Password + " dbname=gocafe sslmode=verify-full"
-	db, err := sql.Open("postgres", "postgres://postgres:8gmytbz7***@localhost/gocafe?sslmode=verify-full")
-	// db, err := sql.Open("postgres", pqStr)
+	pqStr := "user=" + conf.DB.User + " password=" + conf.DB.Password + " dbname=gocafe sslmode=verify-full"
+	db, err := sql.Open("postgres", pqStr)
 	if err != nil {
 		log.Fatal(err)
 	}
